@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html data-ng-app="app">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -22,6 +22,10 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Paises", "Index", "PaisListagem", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("PaisesAdd", "Index", "PaisCadastro", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Grupo de Unidades", "Index", "GruniListagem", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Unidades", "Index", "UnidadeListagem", new { area = "" }, null)</li>
                 </ul>
             </div>
         </div>
@@ -36,6 +40,11 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/AngularAPP/paisController.js"></script>
+    <script src="~/Scripts/AngularAPP/Controller.js"></script>
+    <script src="~/Scripts/AngularAPP/Module.js"></script>
+    <script src="~/Scripts/AngularAPP/Service.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
